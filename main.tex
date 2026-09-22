@@ -1,0 +1,137 @@
+\documentclass[UTF8]{ctexart}
+
+% 页面设置
+\usepackage[a4paper,margin=2cm]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{caption}
+\usepackage{hyperref}
+\usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algorithmic} 
+\usepackage{algorithmicx}
+\usepackage{algpseudocode,float}
+\usepackage{lipsum}
+\usepackage{subcaption} 
+\usepackage{pdfpages}
+\usepackage[nameinlink]{cleveref}
+\usepackage\{longtable, booktabs, array\} 
+
+\newtheorem{thm}{定理}[section] 
+\newtheorem{lem}[thm]{引理}   
+\newtheorem{col}[thm]{推论}
+\newtheorem{defi}[thm]{定义}
+\renewcommand{\proofname}{\textbf{证明}}
+\newcommand{\op}{\mathrm{op}}
+\newcommand{\F}{\mathbb{F}}
+
+\makeatletter
+\newenvironment{breakablealgorithm}
+  {% \begin{breakablealgorithm}
+   \begin{center}
+     \refstepcounter{algorithm}% New algorithm
+     \hrule height.8pt depth0pt \kern2pt% \@fs@pre for \@fs@ruled
+     \renewcommand{\caption}[2][\relax]{% Make a new \caption
+       {\raggedright\textbf{\ALG@name~\thealgorithm} ##2\par}%
+       \ifx\relax##1\relax % #1 is \relax
+         \addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##2}%
+       \else % #1 is not \relax
+         \addcontentsline{loa}{algorithm}{\protect\numberline{\thealgorithm}##1}%
+       \fi
+       \kern2pt\hrule\kern2pt
+     }
+  }{% \end{breakablealgorithm}
+     \kern2pt\hrule\relax% \@fs@post for \@fs@ruled
+   \end{center}
+  }
+\makeatother
+
+
+\usepackage{multirow}
+\usepackage{cite}
+
+
+% 引用上标格式
+\newcommand{\supercite}[1]{\textsuperscript{\cite{#1}}}
+
+% 标题层次格式
+\ctexset{
+  section = {
+    format = \centering\heiti\zihao{4},
+    name   = {},
+    number = \chinese{section},
+    aftername = \quad
+  },
+  subsection = {
+    format = \raggedright\bfseries\zihao{5},
+    name   = {},
+    number = \arabic{subsection},
+    aftername = .~,
+    indent = 2em
+  },
+  subsubsection = {
+    format = \raggedright\zihao{5},
+    name   = {},
+    aftername = ,
+    indent = 2em
+  }
+}
+\renewcommand\thesubsubsection{（\arabic{subsubsection}）}
+
+% 摘要 + 关键词
+\newenvironment{reportabstract}{%
+  \par\noindent\songti\zihao{-5} \textbf{摘\ 要：}%
+}{\par}
+
+\newcommand{\reportkeywords}[1]{%
+  \par\noindent\songti\zihao{-5} \textbf{关键词：}#1\par
+}
+
+\begin{document}
+\bibliographystyle{plain}
+% 正文基础字体
+\songti
+\zihao{5}
+
+% ========== 标题区 ==========
+\title{%
+  \heiti\zihao{2}
+  自适应切换和配置精度的混合精度 GMRES 算法
+}
+
+\author{%
+  \kaishu\zihao{4}
+  北京师范大学\quad 王儒斌\\[0.5em]
+% \\[0.5em]
+  \kaishu\zihao{4}
+  蔡永强 讲师
+}
+\date{}
+\maketitle
+
+% 作者简介脚注
+% \begingroup
+% \renewcommand\thefootnote{}
+% \footnotetext{%
+% \songti\zihao{-5}
+% （此处插入作者简介脚注，符号定义为空白）
+% }
+% \endgroup
+
+% ========== 摘要 ==========
+\begin{reportabstract}
+xxx
+
+\end{reportabstract}
+
+\reportkeywords{A；B；C}
+
+\zihao{5}
+% ========== 正文开始 ==========
+\section{引言}
+
+xxx
+\zihao{-5}
+\bibliography{reference.bib}
+\end{document}

@@ -1,0 +1,138 @@
+@ARTICLE{ref1,
+  author={},
+  journal={IEEE Std 754-2019 (Revision of IEEE 754-2008)}, 
+  title={IEEE Standard for Floating-Point Arithmetic}, 
+  year={2019},
+  volume={},
+  number={},
+  pages={1-84},
+  keywords={IEEE Standards;Floating-point arithmetic;arithmetic;binary;computer;decimal;exponent;floating-point;format;IEEE 754;interchange;NaN;number;rounding;significand;subnormal.},
+  doi={10.1109/IEEESTD.2019.8766229}}
+
+}
+
+@article{ref2,
+title = {GMRES algorithms over 35 years},
+journal = {Applied Mathematics and Computation},
+volume = {445},
+pages = {127869},
+year = {2023},
+issn = {0096-3003},
+doi = {https://doi.org/10.1016/j.amc.2023.127869},
+url = {https://www.sciencedirect.com/science/article/pii/S0096300323000383},
+author = {Qinmeng Zou},
+keywords = {Linear systems, Gram-Schmidt, Mixed precision, Parallel computing, Preconditioning},
+abstract = {This paper is about GMRES algorithms for the solution of nonsingular linear systems. We first consider basic algorithms and study their convergence. We then focus on acceleration strategies and parallel algorithms that are useful for solving challenging systems. We also briefly discuss other problems, such as systems with multiple right-hand sides, shifted systems, and singular systems.}
+}
+
+@article{Kolodziej2019,
+  author    = {Scott P. Kolodziej and Mohsen Aznaveh and Matthew Bullock and Jarrett David and Timothy A. Davis and Matthew Henderson and Yifan Hu and Read Sandstrom},
+  title     = {The SuiteSparse Matrix Collection Website Interface},
+  journal   = {Journal of Open Source Software},
+  volume    = {4},
+  number    = {35},
+  year      = {2019},
+  pages     = {1244--1248},
+  doi       = {10.21105/joss.01244},
+  url       = {https://doi.org/10.21105/joss.01244}
+}
+@article{doi:10.1137/17M1141291,
+author = {Sacchi, Giulia and Simoncini, Valeria},
+title = {A GMRES Convergence Analysis for Localized Invariant Subspace Ill-Conditioning},
+journal = {SIAM Journal on Matrix Analysis and Applications},
+volume = {40},
+number = {2},
+pages = {542-563},
+year = {2019},
+doi = {10.1137/17M1141291},
+
+URL = { 
+    
+        https://doi.org/10.1137/17M1141291
+    
+    
+
+},
+eprint = { 
+    
+        https://doi.org/10.1137/17M1141291
+    
+    
+
+}
+,
+    abstract = { The Generalized Minimal RESidual (gmres) method is a well-established strategy for iteratively solving a large linear system \$A x = b\$, where \$A\in\mathbb{R}^{n\times n}\$ is a nonsymmetric and nonsingular coefficient matrix, and \$b\in\mathbb{R}^n\$. In the analysis of its convergence for \$A\$ diagonalizable, a much used upper bound for the relative residual norm involves a min-max polynomial problem over the set of eigenvalues of \$A\$, magnified by the condition number of the eigenvector matrix of \$A\$. This latter factor may cause a huge overestimation of the residual norm, making the bound nondescriptive in practice. We show that when a large condition number is caused by the almost linear dependence of a few of the eigenvectors, a more descriptive analysis of the method's behavior can be performed, irrespective of the location of the corresponding eigenvalues. The new analysis aims at capturing how the gmres polynomial deals with the ill-conditioning; as a by-product, a new upper bound for the gmres residual norm is obtained. A variety of numerical experiments illustrate our findings. }
+}
+@article{Guo2024,
+  author    = {郭帅哲 and 高建花 and 计卫星},
+  title     = {基于混合精度的分布式GMRES算法优化},
+  journal   = {计算机科学},
+  year      = {2024},
+  volume    = {51},
+  number    = {9},
+  pages     = {15--22},
+}
+
+@article{doi:10.1137/17M1122918,
+author = {Carson, Erin and Higham, Nicholas J.},
+title = {A New Analysis of Iterative Refinement and Its Application to Accurate Solution of Ill-Conditioned Sparse Linear Systems},
+journal = {SIAM Journal on Scientific Computing},
+volume = {39},
+number = {6},
+pages = {A2834-A2856},
+year = {2017},
+doi = {10.1137/17M1122918},
+
+URL = { 
+    
+        https://doi.org/10.1137/17M1122918
+    
+    
+
+},
+eprint = { 
+    
+        https://doi.org/10.1137/17M1122918
+    
+    
+
+}
+,
+    abstract = { Iterative refinement is a long-standing technique for improving the accuracy of a computed solution to a nonsingular linear system \$Ax = b\$ obtained via LU factorization. It makes use of residuals computed in extra precision, typically at twice the working precision, and existing results guarantee convergence if the matrix \$A\$ has condition number safely less than the reciprocal of the unit roundoff, \$u\$. We identify a mechanism that allows iterative refinement to produce solutions with normwise relative error of order \$u\$ to systems with condition numbers of order \$u^{-1}\$ or larger, provided that the update equation is solved with a relative error sufficiently less than 1. A new rounding error analysis is given, and its implications are analyzed. Building on the analysis, we develop a GMRES (generalized minimal residual)-based iterative refinement method (GMRES-IR) that makes use of the computed LU factors as preconditioners. GMRES-IR exploits the fact that even if \$A\$ is extremely ill conditioned the LU factors contain enough information that preconditioning can greatly reduce the condition number of \$A\$. Our rounding error analysis and numerical experiments show that GMRES-IR can succeed where standard refinement fails, and that it can provide accurate solutions to systems with condition numbers of order \$u^{-1}\$ and greater. Indeed, in our experiments with such matrices---both random and from the University of Florida Sparse Matrix Collection---GMRES-IR yields a normwise relative error of order \$u\$ in at most three steps in every case. }
+}
+
+
+@article{greenbaum1997numerical,
+  title={Numerical stability of the GMRES method},
+  author={Greenbaum, Anne and Rozlo{\v{z}}n{\'\i}k, Miroslav and Strako{\v{s}}, Zden{\v{e}}k},
+  journal={BIT Numerical Mathematics},
+  volume={37},
+  number={1},
+  pages={29--46},
+  year={1997},
+  publisher={Springer}
+}
+
+@article{SimonciniSzyld2003,
+  author  = {Valeria Simoncini and Daniel B. Szyld},
+  title   = {Theory of Inexact Krylov Subspace Methods and Applications to Scientific Computing},
+  journal = {SIAM Journal on Scientific Computing},
+  volume  = {25},
+  number  = {2},
+  pages   = {454--477},
+  year    = {2003},
+  doi     = {10.1137/S1064827502406415},
+  publisher = {Society for Industrial and Applied Mathematics}
+}
+
+@book{doi:10.1137/1.9781611971163,
+author = {Parlett, Beresford N.},
+title = {The Symmetric Eigenvalue Problem},
+publisher = {Society for Industrial and Applied Mathematics},
+year = {1998},
+doi = {10.1137/1.9781611971163},
+address = {},
+edition   = {},
+URL = {https://epubs.siam.org/doi/abs/10.1137/1.9781611971163},
+eprint = {https://epubs.siam.org/doi/pdf/10.1137/1.9781611971163}
+}
